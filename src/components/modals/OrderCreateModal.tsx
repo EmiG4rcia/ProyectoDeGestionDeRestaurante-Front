@@ -63,7 +63,7 @@ export function OrderCreateModal({ onClose }: OrderCreateModalProps) {
       {
         customer_id: customerId || undefined,
         table_id: tableId || undefined,
-        items: cart.map(({ name: _, ...item }) => item),
+        items: cart.map(({ name: _name, ...item }) => item),
       },
       { onSuccess: onClose, onError: () => setError('Error al crear el pedido') }
     )
