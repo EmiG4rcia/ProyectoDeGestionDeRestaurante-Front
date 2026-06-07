@@ -1,19 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import type { ReactNode } from 'react'
 import { AuthContext } from './authContextValue'
 
 export { AuthContext }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return !!localStorage.getItem('access_token')
+  })
   const [adminId, setAdminId] = useState<string | null>(null)
-
-  useEffect(() => {
-    const token = localStorage.getItem('access_token')
-    if (token) {
-      setIsAuthenticated(true)
-    }
-  }, [])
 
   const login = (token: string) => {
     localStorage.setItem('access_token', token)
