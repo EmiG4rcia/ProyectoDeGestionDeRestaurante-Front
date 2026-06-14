@@ -8,6 +8,12 @@ Sistema web de gestión integral para restaurantes. Permite administrar pedidos,
 
 ---
 
+## Informe Técnico
+
+[https://drive.google.com/file/d/15zjwHGHLNEHQWSPfXynZBopaJh3G1IA7/view?usp=drive_link](https://drive.google.com/file/d/15zjwHGHLNEHQWSPfXynZBopaJh3G1IA7/view?usp=drive_link)
+
+---
+
 ## Demo en línea
 
 | Recurso | URL |
